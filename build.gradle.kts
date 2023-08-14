@@ -14,7 +14,9 @@ repositories {
 dependencies {
   testImplementation(kotlin("test"))
   implementation(kotlin("stdlib-jdk8"))
-  runtimeOnly("khttp:khttp:1.0.0")
+  testImplementation("io.kotest:kotest-runner-junit5:4.6.0")
+  testImplementation("io.kotest:kotest-runner-junit5-jvm:4.6.0")
+//  runtimeOnly("khttp:khttp:1.0.0")
 }
 
 tasks.test {
@@ -24,6 +26,10 @@ tasks.test {
 tasks.withType<KotlinCompile>() {
     kotlinOptions.jvmTarget = "1.8"
 }
+tasks.withType<Test>().configureEach {
+  useJUnitPlatform()
+}
+
 val compileKotlin: KotlinCompile by tasks
 compileKotlin.kotlinOptions {
   jvmTarget = "1.8"

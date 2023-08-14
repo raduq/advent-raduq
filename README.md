@@ -1,5 +1,5 @@
 # advent-raduq
 
-Solutions for Advent of Code:
+Solutions/Tries for Advent of Code / LeetCode:
 
 https://adventofcode.com/

@@ -1,6 +1,5 @@
 package com.raduq.leet.twoSum
 
-import com.raduq.leet.twoSum.EasyTwoSum
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
 
